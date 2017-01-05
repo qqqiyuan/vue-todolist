@@ -1,0 +1,66 @@
+.placeholder(@color: @input-color-placeholder) {
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.word-wrap() {
+  word-wrap:break-word; 
+  word-break:break-all;
+  overflow:hidden;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Arr
+// --------------------------------------------------
+.arr-up(@color, @width, @height) {
+  border-color: transparent transparent @color transparent;
+  border-style: solid;
+  border-width: @height (@width/2);
+  width:0px;
+  height:0px;
+}
+.arr-down(@color, @width, @height) {
+  border-color: @color transparent transparent transparent;
+  border-style: solid;
+  border-width: @height (@width/2);
+  width:0px;
+  height:0px;
+}
+.arr-left(@color, @width, @height) {
+  border-color: transparent @color transparent transparent;
+  border-style: solid;
+  border-width: (@height/2) @width;
+  width:0px;
+  height:0px;
+}
+.arr-right(@color, @width, @height) {
+  border-color: transparent transparent transparent @color;
+  border-style: solid;
+  border-width: (@height/2) @width;
+  width:0px;
+  height:0px;
+}
+
+.border-left-radius(@radius) {
+	border-top-left-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+.border-right-radius(@radius) {
+	border-top-right-radius: @radius;
+	border-bottom-right-radius: @radius;
+}
